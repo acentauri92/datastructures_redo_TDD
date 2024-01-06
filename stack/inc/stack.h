@@ -11,9 +11,11 @@ enum stackFlags{
 };
 
 /*Prototype definitions*/
-void push(stack_t* pStack, int number);
-int pop(stack_t* pStack);
+stack_t* createStack(size_t sizeOfStack); //TODO
+void initStack(stack_t* pStack);
 bool isEmpty(stack_t* pStack);
 bool isFull(stack_t* pStack);
-void initStack(stack_t* pStack);
+
+bool push(stack_t* pStack, int number);
+int pop(stack_t* pStack);
 void printStack(stack_t* pStack);

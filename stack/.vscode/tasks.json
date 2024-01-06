@@ -10,17 +10,6 @@
 				"${workspaceFolder}/test"
 			],
 			"group": "build",
-		},
-		{
-			"type": "cppbuild",
-			"label": "Clean Tests",
-			"command": "make",
-			"args": [
-				"-C",
-				"${workspaceFolder}/test",
-				"clean"
-			],
-			"group": "build",
 		}
 	]
 }
