@@ -63,3 +63,21 @@ TEST(Stack, insertIntoStackWhenFullFails)
   //Insert one more element
   LONGS_EQUAL(false, push(&myStack, testNumber));
 }
+
+TEST(Stack, stackPopWhenEmptyFails)
+{
+  LONGS_EQUAL(STACK_EMPTY, pop(&myStack));
+}
+
+TEST(Stack, stackPopAndCheckOrder)
+{
+  int test_array[SIZE] = {1, 2, 3, 4, 5, 6 , 7, 8, 9, 10};
+  //Make stack full with numbeers from array
+  for(int pushIndex = 0; pushIndex < SIZE; pushIndex++){
+    push(&myStack, test_array[pushIndex]);
+  }
+  //Pop and check order
+  for(int popIndex = (SIZE - 1); popIndex >= 0; popIndex--){
+    LONGS_EQUAL(test_array[popIndex], pop(&myStack));
+  }
+}

@@ -26,7 +26,10 @@ bool push(stack_t* pStack, int number){
 }
 
 int pop(stack_t* pStack){
-
+    if(isEmpty(pStack)){
+        return STACK_EMPTY;
+    }
+    return pStack->item[(pStack->top)--];
 }
 
 void printStack(stack_t* pStack){
@@ -34,5 +37,5 @@ void printStack(stack_t* pStack){
 }
 
 stack_t* createStack(size_t sizeOfStack){
-    
+
 } //TODO
