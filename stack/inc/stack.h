@@ -1,17 +1,13 @@
 #include <stdbool.h>
-#define SIZE    10
+#define SIZE            10
+#define STACK_EMPTY     -1
 
 typedef struct{
     int top;
     int item[SIZE];
 }stack_t;
 
-enum stackFlags{
-    STACK_EMPTY = -1
-};
-
 /*Prototype definitions*/
-stack_t* createStack(size_t sizeOfStack); //TODO
 void initStack(stack_t* pStack);
 bool isEmpty(stack_t* pStack);
 bool isFull(stack_t* pStack);

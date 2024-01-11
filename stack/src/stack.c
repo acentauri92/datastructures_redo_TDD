@@ -33,9 +33,13 @@ int pop(stack_t* pStack){
 }
 
 void printStack(stack_t* pStack){
-
+    if(isEmpty(pStack)){
+        printf("Cannot print. Empty stack\n");
+    }
+    //Take a temp ptr to top for reading
+    int currentTop = pStack->top;
+    while(currentTop != STACK_EMPTY){
+        printf("%d ", pStack->item[currentTop--]);
+    }
+    printf("\n");
 }
-
-stack_t* createStack(size_t sizeOfStack){
-
-} //TODO
